@@ -4,8 +4,6 @@ import './NewEntryForm.css';
 const NewEntryForm = () => {
   const [formData, setFormData] = useState({
     project_code: "",
-    company_name: "",
-    project_name: "",
     billable: false,
     hours: "",
     first_name: "",
@@ -28,8 +26,6 @@ const NewEntryForm = () => {
         const payload = {
             "timesheet": {
                 "project_code": formData.project_code,
-                "company_name": formData.company_name,
-                "project_name": formData.project_name,
                 "billable": formData.billable,
                 "hours": formData.hours,
                 "first_name": formData.first_name,
@@ -125,6 +121,7 @@ const NewEntryForm = () => {
             onChange={handleChange}
           />
         </label>
+        <input type="submit" value="Submit" />
         </form>
       </div>
   )
