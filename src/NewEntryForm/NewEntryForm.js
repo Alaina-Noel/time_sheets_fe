@@ -39,7 +39,6 @@ const NewEntryForm = () => {
             body: JSON.stringify(payload)
         });
         const data = await response.json();
-        console.log(data);
         window.location.reload();
     } catch (error) {
         console.error(error);
