@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import {useEffect} from "react";
 import EntriesContainer from './EntriesContainer/EntriesContainer';
 import Banner from './Banner/Banner';
+import NewEntryForm from './NewEntryForm/NewEntryForm'
 
 const queryTimesheets = (setEntries, setErrorMessage) => {
     const endpoint = `http://localhost:5000/api/v1/timesheets`;
@@ -27,6 +28,7 @@ const queryTimesheets = (setEntries, setErrorMessage) => {
       <header className="App-header">
         <div className="body">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <NewEntryForm />
         <Banner />
         <EntriesContainer 
           entries={entries} 
