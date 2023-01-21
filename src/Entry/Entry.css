@@ -14,6 +14,12 @@
 .companyName {
   padding-left: 10px;
   padding-right: 160px;
+  text-align: left;
+}
+
+.projectName {
+  text-align: left;
+  padding-left: 10px;
 }
 
 .companyName, .projectName, .totalHours {
