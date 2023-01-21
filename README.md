@@ -4,7 +4,7 @@ This is a full-stack web application that uses [React](https://reactjs.org/) (ve
 
 ## Getting Started
 
-These instructions assume  you are using MacOS as your build environment and that you have basic understanding of using the terminal. <br> If you don't, email me at[alaina.noel.8@gmail.com](alaina.noel.8@gmail.com) and I'll walk you through it. 
+These instructions assume  you are using MacOS as your build environment and that you have basic understanding of using the terminal. <br> If you don't, email me at [alaina.noel.8@gmail.com](alaina.noel.8@gmail.com) and I'll walk you through it. 
 
 To get started, you'll need to fork and clone both repositories.
 
@@ -26,6 +26,12 @@ Now you'll need to run both servers at the same time.
 
 ```
 cd time_sheets_be
+```
+```
+bundle install
+```
+```
+rails db:{create,migrate}
 ```
 ```
 rake load:all
