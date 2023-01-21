@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Welcome to TimeSheets
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a full-stack web application that uses [React](https://reactjs.org/) (version 8.3.1) for the frontend and [Rails](https://rubyonrails.org/) (version 5.2.8.1) for the backend.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+These instructions assume  you are using MacOS as your build environment and that you have basic understanding of using the terminal. <br> If you don't, email me at[alaina.noel.8@gmail.com](alaina.noel.8@gmail.com) and I'll walk you through it. 
 
-### `npm start`
+To get started, you'll need to fork and clone both repositories.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Fork & Clone the frontend repository by clicking the "Fork" button at the top right of [this page](https://github.com/Alaina-Noel/time_sheets_fe).<br> Click Create Fork. And then run the following command in your terminal:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone git@github.com:YOUR-USERNAME/time_sheets_fe.git
+```
 
-### `npm test`
+1. Fork & Clone the backend repository by clicking the "Fork" button at the top right of [this page](https://github.com/Alaina-Noel/time_sheets_be). Click Create Form. And then run the following command in your terminal:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone git@github.com:YOUR-USERNAME/time_sheets_be.git
+```
 
-### `npm run build`
+Now you'll need to run both servers at the same time.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. To set up and run the backend server run the following commands from the terminal:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cd time_sheets_be
+```
+```
+rake load:all
+```
+```
+rails -p 5000
+```
+1. In a second tab in your terminal, without closing the first, cd into the frontend app and run
+```
+npm start
+```
+A browser should pop up where you can view the data that already exists in the database as well as add new entries.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If a browser doesn't pop up, Once both servers are running, you can access the application by visiting [http://localhost:3000](http://localhost:3000).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Note: backend runs on port 5000 and frontend on 3000
