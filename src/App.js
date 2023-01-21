@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
+import {useEffect} from "react";
+import TimesheetContainer from './TimesheetContainer/TimesheetContainer';
 
-function App() {
+const queryTimesheets = (setEntries, setErrorMessage) => {
+    const endpoint = `http://localhost:5000/api/v1/timesheets`;
+    fetch(endpoint)
+      .then(response => response.json())
+      .then(data => setEntries(data.data))
+      .catch(error => {
+       setErrorMessage(error.message);
+      });
+  }
+  
+  const App = () =>  {
+    const [entries, setEntries] = useState([]);
+    const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    queryTimesheets(setEntries, setErrorMessage);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="body">
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <TimesheetContainer 
+          entries={entries} 
+          errorMessage={errorMessage} 
+        />
+        </div>
       </header>
     </div>
   );
 }
+
 
 export default App;
