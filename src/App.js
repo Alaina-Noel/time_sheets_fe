@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from "react";
 import {useEffect} from "react";
 import TimesheetContainer from './TimesheetContainer/TimesheetContainer';
+import Banner from './Banner/Banner';
 
 const queryTimesheets = (setEntries, setErrorMessage) => {
     const endpoint = `http://localhost:5000/api/v1/timesheets`;
@@ -26,10 +27,11 @@ const queryTimesheets = (setEntries, setErrorMessage) => {
       <header className="App-header">
         <div className="body">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <Banner />
         <TimesheetContainer 
           entries={entries} 
           errorMessage={errorMessage} 
-        />
+          />
         </div>
       </header>
     </div>
