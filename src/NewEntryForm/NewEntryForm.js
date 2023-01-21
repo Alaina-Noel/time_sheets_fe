@@ -40,6 +40,7 @@ const NewEntryForm = () => {
         });
         const data = await response.json();
         console.log(data);
+        window.location.reload();
     } catch (error) {
         console.error(error);
     }
