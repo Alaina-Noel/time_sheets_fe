@@ -15,3 +15,8 @@
   padding-left: 10px;
   padding-right: 160px;
 }
+
+.companyName, .projectName, .totalHours {
+  color: rgb(81, 122, 192);
+  font-weight: 600;
+}
