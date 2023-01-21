@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import {useEffect} from "react";
-import TimesheetContainer from './TimesheetContainer/TimesheetContainer';
+import EntriesContainer from './EntriesContainer/EntriesContainer';
 import Banner from './Banner/Banner';
 
 const queryTimesheets = (setEntries, setErrorMessage) => {
@@ -28,7 +28,7 @@ const queryTimesheets = (setEntries, setErrorMessage) => {
         <div className="body">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <Banner />
-        <TimesheetContainer 
+        <EntriesContainer 
           entries={entries} 
           errorMessage={errorMessage} 
           />
