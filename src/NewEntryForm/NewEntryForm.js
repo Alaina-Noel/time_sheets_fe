@@ -22,6 +22,14 @@ const NewEntryForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    let isFormValid = true;
+    for (const key in formData) {
+      if (!formData[key]) {
+        isFormValid = false;
+        break;
+      }
+    }
+    if (isFormValid) {
     try {
         const payload = {
             "timesheet": {
@@ -44,6 +52,9 @@ const NewEntryForm = () => {
     } catch (error) {
         console.error(error);
     }
+  } else {
+    alert("Please fill out all fields before submitting the form.");
+  }
 };
 
   return (
