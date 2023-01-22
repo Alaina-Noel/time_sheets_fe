@@ -22,14 +22,12 @@ const NewEntryForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let isFormValid = true;
     for (const key in formData) {
       if (!formData[key]) {
-        isFormValid = false;
-        break;
+        alert("Please fill out all fields before submitting the form.");
+        return;
       }
     }
-    if (isFormValid) {
     try {
         const payload = {
             "timesheet": {
@@ -52,9 +50,6 @@ const NewEntryForm = () => {
     } catch (error) {
         console.error(error);
     }
-  } else {
-    alert("Please fill out all fields before submitting the form.");
-  }
 };
 
   return (
@@ -75,7 +70,7 @@ const NewEntryForm = () => {
             <option value="GM002">Admin/Legal</option>
             <option value="GM003">Paid Time Off</option>
             <option value="TM001">Roonder 3.0</option>
-            <option value="Audosis003 ">Project Wildfire</option>
+            <option value="Audosis003">Project Wildfire</option>
             <option value="FSG03">Google Drive Integration</option>
             <option value="DV002">React Native</option>
             <option value="DV002">Training</option>
@@ -95,43 +90,19 @@ const NewEntryForm = () => {
         </label>
         <br />
         <label>
-          Hours:
-          <input
-            type="number"
-            name="hours"
-            value={formData.hours}
-            onChange={handleChange}
-          />
+          Hours: <input type="number" name="hours" value={formData.hours} onChange={handleChange}/>
         </label>
         <br />
         <label>
-          First Name:
-          <input
-            type="text"
-            name="first_name"
-            value={formData.first_name}
-            onChange={handleChange}
-          />
+          First Name: <input type="text" name="first_name" value={formData.first_name} onChange={handleChange}/>
         </label>
         <br />
         <label>
-          Last Name:
-          <input
-            type="text"
-            name="last_name"
-            value={formData.last_name}
-            onChange={handleChange}
-          />
+          Last Name: <input type="text" name="last_name" value={formData.last_name} onChange={handleChange}/>
         </label>
         <br />
         <label>
-          Billable Rate:
-          <input
-            type="number"
-            name="billable_rate"
-            value={formData.billable_rate}
-            onChange={handleChange}
-          />
+          Billable Rate: <input type="number" name="billable_rate" value={formData.billable_rate} onChange={handleChange}/>
         </label>
         <br />
         <input type="submit" value="Submit" />
@@ -140,4 +111,4 @@ const NewEntryForm = () => {
   )
 }
 
-  export default NewEntryForm;
+export default NewEntryForm;
