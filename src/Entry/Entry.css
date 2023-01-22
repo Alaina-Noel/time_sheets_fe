@@ -30,6 +30,7 @@
 .billableHours {
   text-align: right;
   padding-right: 35px;
+  color: black;
 }
 
 .billableAmount {
