@@ -72,6 +72,7 @@ const NewEntryForm = () => {
         <label>
           Billable:
           <input
+            className='billable'
             type="checkbox"
             name="billable"
             checked={formData.billable}
