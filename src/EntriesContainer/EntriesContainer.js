@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react';
 import './EntriesContainer.css';
-import Entry from "../Entry/Entry";
+import Entry from '../Entry/Entry';
 
-const EntriesContainer = ({entries}) => {
-  return(
-  <div className="entries-container">
-    {entries.map((entry) => {
-      return (
+function EntriesContainer({ entries }) {
+  return (
+    <div className="entries-container">
+      {entries.map((entry) => (
         <div className="entry-data-container" key={entry.id}>
           <Entry
             companyName={entry.client_name}
@@ -16,9 +15,9 @@ const EntriesContainer = ({entries}) => {
             billableAmount={entry.total_billable_amount}
           />
         </div>
-      );
-    })}
-  </div>)
+      ))}
+    </div>
+  );
 }
 
 export default EntriesContainer;
