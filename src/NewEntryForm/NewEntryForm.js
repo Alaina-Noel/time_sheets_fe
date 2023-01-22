@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './NewEntryForm.css';
 
-const NewEntryForm = () => {
+const NewEntryForm = ( {entries} ) => {
   const [formData, setFormData] = useState({
     project_code: "RD001",
     billable: false,
@@ -52,20 +52,9 @@ const NewEntryForm = () => {
             value={formData.project_code}
             onChange={handleChange}
           >
-            <option value="RD001">Ethereum</option>
-            <option value="DV002">Pharos</option>
-            <option value="GM001">Business Development</option>
-            <option value="GM005">Conference/Training</option>
-            <option value="GM006">Team Development (Non-Training)</option>
-            <option value="GM002">Admin/Legal</option>
-            <option value="GM003">Paid Time Off</option>
-            <option value="TM001">Roonder 3.0</option>
-            <option value="Audosis003">Project Wildfire</option>
-            <option value="FSG03">Google Drive Integration</option>
-            <option value="RD002">React Native</option>
-            <option value="GM017">Training</option>
-            <option value="RD003">Watchlist Demo</option>
-            <option value="GM018">Recruiting</option>
+          {entries.map((entry)=> {
+            return <option key={entry.id} value={entry.id}>{entry.project_name}</option>
+          })}
           </select>
         </label>        
         <br />

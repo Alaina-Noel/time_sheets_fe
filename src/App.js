@@ -6,7 +6,7 @@ import Banner from './Banner/Banner';
 import NewEntryForm from './NewEntryForm/NewEntryForm'
 
 const queryTimesheets = (setEntries, setErrorMessage) => {
-    const endpoint = `http://localhost:5000/api/v1/timesheets`;
+  const endpoint = `http://localhost:5000/api/v1/timesheets`;
     fetch(endpoint)
       .then(response => response.json())
       .then(data => setEntries(data.data))
@@ -26,7 +26,9 @@ const queryTimesheets = (setEntries, setErrorMessage) => {
       <header className="App-header">
         <div className="body">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <NewEntryForm />
+        <NewEntryForm 
+          entries={entries}
+        />
         <Banner />
         <EntriesContainer 
           entries={entries} 
