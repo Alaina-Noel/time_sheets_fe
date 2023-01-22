@@ -4,9 +4,9 @@ This is a full-stack web application that uses [React](https://reactjs.org/) (ve
 
 ## Getting Started
 
-These instructions assume  you are using MacOS as your build environment and that you have basic understanding of using the terminal. <br> If you don't, email me at [alaina.noel.8@gmail.com](alaina.noel.8@gmail.com) and I'll walk you through it. 
+These instructions assume  you are using MacOS Monterey as your build environment and that you have basic understanding of using the terminal. <br> If you don't, email me at [alaina.noel.8@gmail.com](alaina.noel.8@gmail.com) and I'll walk you through it. 
 
-You will need Ruby, Rails, Node and React installed. <br>
+You will need Ruby, Rails, Node, Rbenv, and React installed. <br>
 
 To check that you have Node installed run ```node -v``` in your terminal. If nothing is there, [install Node](https://nodejs.org/en/download/).
 
@@ -15,6 +15,8 @@ run ```npm install```
 To check that you have Ruby installed run ```ruby -v``` in your terminal. If nothing is there, install Ruby [by following these directions](https://www.ruby-lang.org/en/documentation/installation/).
 
 To check that you have Rails installed run ```rails -v``` in your terminal. If nothing is there, install Rails [by following these directions](https://rubyonrails.org/)
+
+To download rbenv [follow the instructions here](https://github.com/rbenv/rbenv#installation)
 
 Now you'll need to clone both repositories.
 
@@ -58,3 +60,6 @@ A browser should pop up where you can view the data that already exists in the d
 If a browser doesn't pop up, Once both servers are running, you can access the application by visiting [http://localhost:3000](http://localhost:3000).
 
 Note: backend runs on port 5000 and frontend on 3000
+
+
+[Link to the Backend Repo](https://github.com/Alaina-Noel/time_sheets_be)
