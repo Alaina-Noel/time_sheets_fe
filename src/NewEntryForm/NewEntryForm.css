@@ -1,17 +1,24 @@
 .entry-form-container {
   padding: 30px;
-  padding-left: 300px;
+  padding-left: 150px;
   font-size: 19px;
   margin-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
   margin: auto;
   width: 50%;
+  grid-template-columns: 150px 1fr;
+  grid-gap: 10px;
+}
+
+.label {
+  grid-column: 1;
+}
+
+.input {
+  grid-column: 2;
 }
 
 .entry-form-container label {
   margin: 10px;
-  width: 100%;
   text-align: left;
 }
 
@@ -41,4 +48,9 @@
 
 .entry-form-container input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.billable {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

@@ -10,9 +10,7 @@ const queryTimesheets = (setEntries, setErrorMessage) => {
     fetch(endpoint)
       .then(response => response.json())
       .then(data => setEntries(data.data))
-      .catch(error => {
-       setErrorMessage(error.message);
-      });
+      .catch(error => {setErrorMessage(error.message)});
   }
   
   const App = () =>  {
@@ -39,6 +37,5 @@ const queryTimesheets = (setEntries, setErrorMessage) => {
     </div>
   );
 }
-
 
 export default App;
