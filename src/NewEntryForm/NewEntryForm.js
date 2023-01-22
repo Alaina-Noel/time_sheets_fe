@@ -133,6 +133,7 @@ const NewEntryForm = () => {
             onChange={handleChange}
           />
         </label>
+        <br />
         <input type="submit" value="Submit" />
         </form>
       </div>

@@ -24,17 +24,19 @@
 
 .totalHours {
   text-align: right;
-  padding-right: 90px;
+  padding-right: 55px;
 }
 
 .billableHours {
   text-align: right;
-  padding-right: 90px;
+  padding-right: 35px;
 }
 
 .billableAmount {
   text-align: right;
-  padding-right: 90px;
+  padding-right: 50px;
+  color: black;
+  font-weight: 600;
 }
 
 .companyName, .projectName, .totalHours {
