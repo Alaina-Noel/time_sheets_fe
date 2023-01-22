@@ -3,7 +3,7 @@ import './NewEntryForm.css';
 
 const NewEntryForm = () => {
   const [formData, setFormData] = useState({
-    project_code: "",
+    project_code: "RD001",
     billable: false,
     hours: "",
     first_name: "",
@@ -62,10 +62,10 @@ const NewEntryForm = () => {
             <option value="TM001">Roonder 3.0</option>
             <option value="Audosis003">Project Wildfire</option>
             <option value="FSG03">Google Drive Integration</option>
-            <option value="DV002">React Native</option>
-            <option value="DV002">Training</option>
-            <option value="DV002">Watchlist Demo</option>
-            <option value="DV002">Recruiting</option>
+            <option value="RD002">React Native</option>
+            <option value="GM017">Training</option>
+            <option value="RD003">Watchlist Demo</option>
+            <option value="GM018">Recruiting</option>
           </select>
         </label>        
         <br />
