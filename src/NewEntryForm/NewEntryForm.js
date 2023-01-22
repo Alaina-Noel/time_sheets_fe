@@ -29,22 +29,12 @@ const NewEntryForm = () => {
       }
     }
     try {
-        const payload = {
-            "timesheet": {
-                "project_code": formData.project_code,
-                "billable": formData.billable,
-                "hours": formData.hours,
-                "first_name": formData.first_name,
-                "last_name": formData.last_name,
-                "billable_rate": formData.billable_rate
-            }
-        }
+        const payload = { "timesheet": {...formData} };
         const response = await fetch("http://localhost:5000/api/v1/timesheets", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
         });
-        const data = await response.json();
         alert("Form submitted successfully!");
         window.location.reload();
     } catch (error) {
