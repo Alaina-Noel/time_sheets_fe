@@ -23,7 +23,7 @@ function NewEntryForm({ entries }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     for (const key in formData) {
-      if (!formData[key]) {
+      if (!formData[key] && !formData[key] === 'billable') {
         alert('Please fill out all fields before submitting the form.');
         return;
       }
