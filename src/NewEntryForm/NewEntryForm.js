@@ -23,7 +23,6 @@ function NewEntryForm({ entries }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     for (const key in formData) {
-      console.log(formData[key]);
       if (formData[key] === '') {
         alert('Please fill out all fields before submitting the form.');
         return;
